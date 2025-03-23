@@ -1,0 +1,376 @@
+h1, ul, li {
+    display: inline;
+}
+ul {
+    margin-left: 40%;
+}
+li {
+    padding: 5px;
+}
+a {
+    text-decoration: none;
+    position: relative;
+    color: black;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+}
+nav {
+    background-color: #1f1f3d; /* Dark Royal Blue */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: 1000;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav h1, nav ul li a {
+    color:white;
+}
+
+nav a:hover {
+    background-color: rgba(255, 215, 0, 0.2);
+}
+
+a:hover {
+    background-color: gray;
+    border-radius: 5px;
+    color:aliceblue;
+    text-transform: uppercase;
+}
+nav a.active {
+    text-decoration: underline; /* Add underline to indicate current page */
+    font-weight: bold; /* Make it stand out */
+    text-transform: uppercase;
+    
+}
+body {
+    background: linear-gradient(135deg, #e6c7bc, #524f42);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Services Section */
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 100px 50px 50px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-icon {
+    font-size: 50px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 16px;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.service-card:hover {
+    animation: float 1.5s infinite ease-in-out;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebe57;
+}
+.additional-info {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #fff, #e6c7bc);
+    color: #333;
+    border-radius: 15px;
+    margin: 50px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.info-box {
+    display: inline-block;
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.info-box i {
+    font-size: 40px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.info-box:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up {
+    animation: slideUp 1.2s ease-in-out;
+}
+
+@keyframes zoomIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.zoom-in {
+    animation: zoomIn 1.5s ease-in-out;
+}
+.footer {
+    background: #1f1f3d; /* Dark Blue */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.2);
+    margin: 0; /* Ensures no margin around footer */
+    width: 100%;
+    position: relative; /* Keeps it aligned properly */
+}
+
+/* Footer Layout */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+
+.footer-left a {
+    color: #dee1d2; /* Light Gold */
+    font-size: 20px;
+    text-decoration: none; /* Removes default underline */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-left a:hover {
+    text-decoration: underline; /* Show underline only on hover */
+    color: #ff4500; /* Change color on hover (optional) */
+    background: none; /* Removes any background effect */
+    box-shadow: none !important; /* Forces no shadow */
+    outline: none; /* Removes browser focus outline */
+}
+
+.footer-left i {
+    font-size: 25px;
+}
+
+
+/* Center: Company History */
+.footer-center {
+    flex: 2;
+    text-align: center;
+}
+
+.footer-center h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.footer-center p {
+    font-size: 14px;
+    max-width: 400px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* Right Side: Quick Links */
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+    display: block;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-nav a:hover {
+    color: #FFD700;
+}
+
+/* Bottom Text */
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-right {
+        text-align: center;
+    }
+}
+
+/* Right Side: Tailoring Icons */
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+.tailor-icons {
+    font-size: 24px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tailor-icons i {
+    color: #8d1777; /* Gold */
+    animation: beat 1.5s infinite alternate;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Beat (Pulsing) Animation */
+@keyframes beat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Hover Effect */
+.tailor-icons i:hover {
+    color: #c2cebe; /* Bright Orange */
+    animation: none; /* Stops beating when hovered */
+}
+
+/* Bottom Text */
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-right {
+        text-align: center;
+    }
+}
+.whatsapp-float:hover {
+    background-color: #1ebe5d;
+    color: white;
+}
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px; /* Increased from 20px to ensure visibility */
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: beat 1.5s infinite ease-in-out;
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Ensures it's above the footer */
+}
+
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.main-content {
+    flex: 1; /* Ensures content pushes the footer to the bottom */
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}

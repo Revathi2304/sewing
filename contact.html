@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Contact - Your Tailor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">  <!-- External CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:wght@600&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h1>Your Tailor</h1>
+        <ul>
+            <li><a href="index.html">Home |</a></li>
+            <li><a href="about.html">About |</a></li>
+            <li><a href="service.html">Services |</a></li>
+            <li><a href="#contact">Contact |</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-container">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Reach out to us using the details below.</p>
+        <div class="contact-details">
+            <p><i class="fas fa-phone"></i> Phone: +91 95970 77918</p>
+            <p><i class="fas fa-envelope"></i> Email: contact@yourtailor.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Address: 123 Tailor Street, Chennai, India</p>
+        </div>
+        <section class="map-section">
+            <h2 class="map-heading">📍 Find Us Here</h2>
+            <div class="map-overlay">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d978.3310786607775!2d78.86460166949817!3d11.237535914701942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bab1b68e787e989%3A0xe45485e6e5c6317!2s180%2C%20NSB%20Rd%2C%20Super%20Nagar%2C%20Perambalur%2C%20Tamil%20Nadu%20621212!5e0!3m2!1sen!2sin!4v1742262323699!5m2!1sen!2sin" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+            <p class="address-text">
+                📌 180, NSB Rd, Super Nagar, Perambalur, Tamil Nadu 621212
+            </p>
+        </section>
+        
+
+        
+        
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/9597077918?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll("nav a");
+
+            // Intersection Observer to detect the current section
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            // Remove active class from all links
+                            navLinks.forEach((link) => link.classList.remove("active"));
+
+                            // Find the corresponding link and add active class
+                            let id = entry.target.getAttribute("id");
+                            let activeLink = document.querySelector(`nav a[href="#${id}"]`);
+                            if (activeLink) {
+                                activeLink.classList.add("active");
+                            }
+                        }
+                    });
+                },
+                { threshold: 0.5 } // Adjust sensitivity
+            );
+
+            sections.forEach((section) => observer.observe(section));
+        });
+    </script>
+
+</body>
+</html>
