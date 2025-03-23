@@ -219,7 +219,7 @@ nav a.active {
     }
 }
 body{
-    background-image: url(images/about4.jpg);
+    background-image: url(about4.jpg);
 }
 /* Stylish Box for "Who We Are" and "We Care" */
 .about-text p, .we-care-text p {
