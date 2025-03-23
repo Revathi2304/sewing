@@ -67,7 +67,7 @@ a:hover {
     background-color: antiquewhite;
 }
 body{
-    background: url(images/c1.jpg);
+    background: url(c1.jpg);
     background-size: cover;
     background-position: center;
     opacity: 1;
